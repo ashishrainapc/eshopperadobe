@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		digitalData = {}
+	</script>
+	<script>
+	
+		digitalData = {
+			transaction:{
+				id: "txn123456",
+				value: 159
+			},
+	product:{
+		name: "Colorblock Scuba",
+		id: "1089772",
+		price: "159",
+		availability: "In Stock",
+		condition: "New",
+		brand: "E-SHOPPER"
+	}
+}
+
+</script>
+
+<script src="//assets.adobedtm.com/0d7a963db5ca/afdf378702ac/launch-b2894a91e76b-development.min.js" async></script>
+<script>
+var dataLayer = [];
+</script>
+
+
+<title>Thanks | E-Shopper</title>
+<script>
+	function validateForm() {
+  var x = document.forms["form"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var x = document.forms["form"]["email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  var x = document.forms["form"]["comments"].value;
+  if (x == "") {
+    alert("Comments must be entered");
+    return false;
+  }
+}
+	</script>
+</head><!--/head-->
+
+<body onload="purchase();">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GR53PS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<h1>Thank You</h1>
+<p>Big Thanks for beeeeing here</p>
+			
+<h2> Please provide your valuable feedback below: </h2>
+<form name="form" onsubmit="return validateForm()">
+<p>Name:<input type = "text" name = "name" /> </p>
+<p>Email:<input type = "text" name = "email" /></p>
+<p>Comments:<input type = "text" name = "comments" /></p>
+<input id = "submit" type = "submit" name = "submit" value = "Submit" />
+<input type = "reset" name = "reset"  value = "Reset" />
+</form>
+<script>
+			var pageTitle = document.title;
+			var pageReferrer = document.referrer;
+			var pageURL = document.location.href;
+			digitalData.page = {
+				pageInfo: {
+					pageName: pageTitle,
+					pageReferrer: pageReferrer,
+					pageURL: pageURL
+				}
+			} 	
+			_satellite.track("page_view");	
+	</script>
+
+<script>
+	function purchase(){
+		_satellite.track("purchase");
+	}
+</script>
+</body>
+</html>
